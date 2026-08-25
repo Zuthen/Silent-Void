@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dn2chestyiw8b"]
+
+[node name="Actions" type="MenuButton" unique_id=1684812065]
+offset_top = -1.0
+offset_right = 231.0
+offset_bottom = 135.0
+item_count = 2
+popup/item_0/text = "Dupa 1"
+popup/item_0/id = 0
+popup/item_1/text = "Dupa 2"
+popup/item_1/id = 1
