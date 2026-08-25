@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://mn8qtvavg7cr"]
+
+[ext_resource type="Texture2D" uid="uid://7pfwa8rnfskv" path="res://assets/kenney_scribble-platformer-expansion_1.0/PNG/Large (2×)/castle.png" id="1_xigr5"]
+[ext_resource type="Script" uid="uid://iifcn4frduj8" path="res://house.gd" id="2_evagq"]
+[ext_resource type="PackedScene" uid="uid://dn2chestyiw8b" path="res://game/actions.tscn" id="3_evagq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fi41i"]
+size = Vector2(119, 118)
+
+[node name="House" type="Sprite2D" unique_id=683031303]
+texture = ExtResource("1_xigr5")
+script = ExtResource("2_evagq")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1462585078]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=880441235]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_fi41i")
+
+[node name="Actions" parent="Area2D" unique_id=1684812065 instance=ExtResource("3_evagq")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.5
+offset_top = -68.0
+offset_right = 115.5
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
