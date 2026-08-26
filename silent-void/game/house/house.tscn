@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://7pfwa8rnfskv" path="res://assets/kenney_scribble-platformer-expansion_1.0/PNG/Large (2×)/castle.png" id="1_xigr5"]
 [ext_resource type="Script" uid="uid://iifcn4frduj8" path="res://game/house/house.gd" id="2_evagq"]
-[ext_resource type="PackedScene" uid="uid://dn2chestyiw8b" path="res://game/actions.tscn" id="3_evagq"]
+[ext_resource type="PackedScene" uid="uid://dn2chestyiw8b" path="res://game/house/actions.tscn" id="3_evagq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fi41i"]
 size = Vector2(119, 118)

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://brib522nfmq67"]
+
+[ext_resource type="Texture2D" uid="uid://bgprjl1fcrbyt" path="res://assets/kenney_scribble-platformer-expansion_1.0/PNG/Large (2×)/block.png" id="1_fsw2i"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bdx0o"]
+content_margin_left = 100.0
+content_margin_top = 100.0
+content_margin_right = 100.0
+content_margin_bottom = 100.0
+texture = ExtResource("1_fsw2i")
+
+[node name="PopupPanel" type="PanelContainer" unique_id=205349000]
+offset_left = 101.0
+offset_right = 1233.0
+offset_bottom = 955.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_bdx0o")
+accessibility_region = true
