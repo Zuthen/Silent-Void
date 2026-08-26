@@ -49,4 +49,20 @@ func test_action_menu_visible_on_click():
 	# Assert
 	assert_true(actions.visible)
 	
+func test_spawn():
+	# Arrange
+	var data =  autofree(HouseMockData.new())
+	data._ready()
+	var  test_data = data.houses.pick_random()
+	# Act
+	var test_house: House = house_scene.instantiate()
+	test_house.user_name = test_data.user_name
+	test_house.sprite = test_data.texture
+	add_child_autofree(test_house)
+	# Assert
+	assert_eq(test_house.label.text, test_data.user_name)
+	assert_eq(test_house.sprite, test_data.texture)
+	
+	#Cleanup
+	data.queue_free()
 	

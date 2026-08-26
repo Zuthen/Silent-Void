@@ -3,9 +3,16 @@
 [ext_resource type="Texture2D" uid="uid://7pfwa8rnfskv" path="res://assets/kenney_scribble-platformer-expansion_1.0/PNG/Large (2×)/castle.png" id="1_xigr5"]
 [ext_resource type="Script" uid="uid://iifcn4frduj8" path="res://game/house/house.gd" id="2_evagq"]
 [ext_resource type="PackedScene" uid="uid://dn2chestyiw8b" path="res://game/house/actions.tscn" id="3_evagq"]
+[ext_resource type="FontFile" uid="uid://dgirac0no0sog" path="res://assets/fonts/PatrickHand-Regular.ttf" id="4_a74jl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fi41i"]
 size = Vector2(119, 118)
+
+[sub_resource type="LabelSettings" id="LabelSettings_cvwy8"]
+line_spacing = 2.0
+font = ExtResource("4_a74jl")
+font_size = 24
+font_color = Color(0.1882353, 0.1882353, 0.1882353, 1)
 
 [node name="House" type="Sprite2D" unique_id=683031303]
 texture = ExtResource("1_xigr5")
@@ -46,3 +53,14 @@ grow_vertical = 2
 mouse_filter = 2
 border_width = 4.0
 editor_only = false
+
+[node name="Label" type="Label" parent="." unique_id=1124347403]
+propagate_maximum_size = true
+offset_left = -66.0
+offset_top = -126.0
+offset_right = 69.0
+offset_bottom = -81.0
+label_settings = SubResource("LabelSettings_cvwy8")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
