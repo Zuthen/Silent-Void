@@ -31,7 +31,7 @@ jobs:
       - name: Godot Headless Resource Import (Warmup)
         shell: bash
         run: |
-          godot --headless --editor --quit || true
+          godot --headless --path "$PWD" --editor --quit || true
 
       - name: Run GUT Unit Tests
         shell: bash
