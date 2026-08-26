@@ -36,4 +36,4 @@ jobs:
       - name: Run GUT Unit Tests
         shell: bash
         run: |
-          godot --headless -s addons/gut/gut_cmdline.gd
+          godot --headless -s addons/gut/gut_cmdline.gd -gdir=res://tests/ -gexit
