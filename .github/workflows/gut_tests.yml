@@ -36,4 +36,4 @@ jobs:
       - name: Run GUT Unit Tests
         shell: bash
         run: |
-          godot --headless --path "$PWD" -s addons/gut/cli.gd -gconfig=.gutconfig.json -gexit
+          godot --headless --path "$PWD" -s addons/gut/cli/gut_cli.gd -gconfig=.gutconfig.json -gexit
