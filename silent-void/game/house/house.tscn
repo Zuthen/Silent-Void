@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://mn8qtvavg7cr"]
 
 [ext_resource type="Texture2D" uid="uid://7pfwa8rnfskv" path="res://assets/kenney_scribble-platformer-expansion_1.0/PNG/Large (2×)/castle.png" id="1_xigr5"]
-[ext_resource type="Script" uid="uid://iifcn4frduj8" path="res://house.gd" id="2_evagq"]
+[ext_resource type="Script" uid="uid://iifcn4frduj8" path="res://game/house/house.gd" id="2_evagq"]
 [ext_resource type="PackedScene" uid="uid://dn2chestyiw8b" path="res://game/actions.tscn" id="3_evagq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fi41i"]
@@ -11,13 +11,13 @@ size = Vector2(119, 118)
 texture = ExtResource("1_xigr5")
 script = ExtResource("2_evagq")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1462585078]
+[node name="ClickableArea" type="Area2D" parent="." unique_id=1462585078]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=880441235]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableArea" unique_id=880441235]
 position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_fi41i")
 
-[node name="Actions" parent="Area2D" unique_id=1684812065 instance=ExtResource("3_evagq")]
+[node name="Actions" parent="ClickableArea" unique_id=1684812065 instance=ExtResource("3_evagq")]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -29,3 +29,20 @@ offset_right = 115.5
 offset_bottom = 68.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
+
+[node name="HoverFrame" type="ReferenceRect" parent="." unique_id=679979036]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -129.0
+offset_top = -128.0
+offset_right = 2.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+border_width = 4.0
+editor_only = false
