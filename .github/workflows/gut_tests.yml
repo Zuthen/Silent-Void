@@ -36,4 +36,5 @@ jobs:
       - name: Run GUT Unit Tests
         shell: bash
         run: |
-          godot --headless -s addons/gut/gut_cmdline.gd -gdir=res://tests/ -gexit
+          # Dla GUT w Godot 4 używamy skryptu cli.gd zamiast starych nazw
+          godot --headless -s addons/gut/cli.gd -gdir=res://tests/ -gexit
