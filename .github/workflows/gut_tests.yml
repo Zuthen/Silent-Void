@@ -15,6 +15,7 @@ jobs:
       XDG_CACHE_HOME: /tmp/godot-home/.cache
 
     container:
+      # Oficjalny obraz Godot 4.7 CI
       image: "barichello/godot-ci:4.7"
 
     steps:
@@ -28,12 +29,12 @@ jobs:
           apt-get update
           apt-get install -y --no-install-recommends libfontconfig1 python3-numpy
 
-      - name: Godot Headless Resource Import (Warmup)
+      - name: Import Godot Project Resources
         shell: bash
         run: |
-          godot --headless --path "$PWD" --editor --quit || true
+          godot --headless --path "$PWD" --import --quit || true
 
       - name: Run GUT Unit Tests
         shell: bash
         run: |
-          godot --headless --path "$PWD" -s addons/gut/gut_cmdln.gd -gdir=res://tests/ -gexit
+          godot --headless -d --path "$PWD" -s addons/gut/gut_cmdln.gd -gconfig=.gutconfig.json -gexit
