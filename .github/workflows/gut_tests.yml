@@ -28,19 +28,12 @@ jobs:
           apt-get update
           apt-get install -y --no-install-recommends libfontconfig1 python3-numpy
 
-      - name: Fix GUT Folder Case-Sensitivity
-        shell: bash
-        run: |
-          if [ -d "addons/Gut" ]; then
-            mv addons/Gut addons/gut
-          fi
-
       - name: Import Godot Project Resources
         shell: bash
         run: |
-          godot --headless --path "$PWD" --import --quit || true
+          godot --headless --path "$PWD" --editor --quit || true
 
       - name: Run GUT Unit Tests
         shell: bash
         run: |
-          godot --headless -d --path "$PWD" -s addons/gut/gut_cmdln.gd -gconfig=.gutconfig.json -gexit
+          godot --headless --path "$PWD" -s addons/gut/cli.gd -gconfig=.gutconfig.json -gexit
