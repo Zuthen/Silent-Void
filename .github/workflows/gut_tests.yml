@@ -15,7 +15,6 @@ jobs:
       XDG_CACHE_HOME: /tmp/godot-home/.cache
 
     container:
-      # Oficjalny obraz Godot 4.7 CI
       image: "barichello/godot-ci:4.7"
 
     steps:
@@ -28,6 +27,13 @@ jobs:
           set -euo pipefail
           apt-get update
           apt-get install -y --no-install-recommends libfontconfig1 python3-numpy
+
+      - name: Fix GUT Folder Case-Sensitivity
+        shell: bash
+        run: |
+          if [ -d "addons/Gut" ]; then
+            mv addons/Gut addons/gut
+          fi
 
       - name: Import Godot Project Resources
         shell: bash
