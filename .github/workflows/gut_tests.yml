@@ -28,7 +28,7 @@ jobs:
           apt-get update
           apt-get install -y --no-install-recommends libfontconfig1 python3-numpy
 
-      - name: Import Godot Project Resources
+      - name: Godot Headless Resource Import (Warmup)
         shell: bash
         run: |
           godot --headless --path "$PWD" --editor --quit || true
