@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://bmkc2es02664g"
+
+[deps]
+
+files=["res://translations/Silent void translations - Sheet1.pl.translation", "res://translations/Silent void translations - Sheet1.en.translation"]
+
+source_file="res://translations/Silent void translations - Sheet1.csv"
+dest_files=["res://translations/Silent void translations - Sheet1.pl.translation", "res://translations/Silent void translations - Sheet1.en.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

@@ -3,12 +3,13 @@ class_name  House
 
 var sprite: Texture2D
 var user_name: String
-var user_faction: Player.Faction
+
 
 @onready var house: Sprite2D = $"."
 @onready var hover_frame = $HoverFrame
 @onready var clickable_area = $ClickableArea
 @onready var label = $Label
+@onready var actions: MenuButton = $ClickableArea/Actions
 
 
 func _ready() -> void:
@@ -18,6 +19,9 @@ func _ready() -> void:
 	clickable_area.mouse_entered.connect(_on_mouse_entered)
 	clickable_area.mouse_exited.connect(_on_mouse_exited)
 	hover_frame.visible = false
+	var action_list: PopupMenu = actions.get_popup()
+	for action in Player.actions.skills:
+		action_list.add_item(action.display_name)
 
 
 func _on_mouse_entered() -> void:
@@ -30,7 +34,7 @@ func _on_mouse_exited() -> void:
 	hover_frame.visible = false
 	
 func _setup_faction_color():
-	match user_faction:
+	match Player.faction:
 		Player.Faction.CREATURE:
 			hover_frame.border_color = ColorPaletteGlobal.faction_colors["Creature"]
 		Player.Faction.INVESTIGATOR:
