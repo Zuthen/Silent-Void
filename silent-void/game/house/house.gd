@@ -3,6 +3,7 @@ class_name  House
 
 var sprite: Texture2D
 var user_name: String
+var user_faction: Player.Faction
 
 @onready var house: Sprite2D = $"."
 @onready var hover_frame = $HoverFrame
@@ -11,6 +12,7 @@ var user_name: String
 
 
 func _ready() -> void:
+	_setup_faction_color()
 	house.texture = sprite
 	label.text = user_name
 	clickable_area.mouse_entered.connect(_on_mouse_entered)
@@ -26,3 +28,12 @@ func _on_mouse_entered() -> void:
 func _on_mouse_exited() -> void:
 	Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 	hover_frame.visible = false
+	
+func _setup_faction_color():
+	match user_faction:
+		Player.Faction.CREATURE:
+			hover_frame.border_color = ColorPaletteGlobal.faction_colors["Creature"]
+		Player.Faction.INVESTIGATOR:
+			hover_frame.border_color = ColorPaletteGlobal.faction_colors["Investigator"]
+		Player.Faction.CULTIST:
+			hover_frame.border_color = ColorPaletteGlobal.faction_colors["Cultist"]
