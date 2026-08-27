@@ -23,6 +23,7 @@ ColorPaletteGlobal="*uid://baldlxik0q0n4"
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+mouse_cursor/custom_image="uid://b4enijphw5sjs"
 
 [editor_plugins]
 
