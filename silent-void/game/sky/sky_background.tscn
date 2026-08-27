@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bs3rkxdj4aaju"]
+
+[ext_resource type="Script" uid="uid://ccwej6gne7sf8" path="res://game/sky/sky_background.gd" id="1_7evql"]
+
+[sub_resource type="Gradient" id="Gradient_ned7t"]
+colors = PackedColorArray(0, 0, 0, 1, 0.20392157, 0.7529412, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6n6v7"]
+gradient = SubResource("Gradient_ned7t")
+fill = 3
+
+[node name="SkyBackground" type="Sprite2D" unique_id=1132461579]
+z_index = -1
+scale = Vector2(19.140625, 10.8125)
+texture = SubResource("GradientTexture2D_6n6v7")
+script = ExtResource("1_7evql")

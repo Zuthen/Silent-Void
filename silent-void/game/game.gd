@@ -3,6 +3,7 @@ extends Node2D
 @onready var spawn_points = $SpawnPoints
 @onready var house_mocks = $HouseMocks
 @onready var player = $Player
+@onready var sky_background = $Background/SkyBackground
 
 var house_scene = preload("uid://mn8qtvavg7cr")
 

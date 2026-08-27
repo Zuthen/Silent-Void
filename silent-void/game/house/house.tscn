@@ -56,11 +56,11 @@ editor_only = false
 
 [node name="Label" type="Label" parent="." unique_id=1124347403]
 propagate_maximum_size = true
-offset_left = -66.0
-offset_top = -126.0
-offset_right = 69.0
-offset_bottom = -81.0
+offset_left = -67.0
+offset_top = -138.0
+offset_right = 68.0
+offset_bottom = -89.0
 label_settings = SubResource("LabelSettings_cvwy8")
 horizontal_alignment = 1
-vertical_alignment = 1
+vertical_alignment = 2
 autowrap_mode = 3
