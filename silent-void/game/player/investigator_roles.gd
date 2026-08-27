@@ -22,8 +22,9 @@ func _setup_fbi_agent_actions() -> SkillList:
 	investigator_actions.skills.append(send_message)
 	return investigator_actions
 	
-func _check_identity():
-	pass
+func _check_identity(player_data:PlayerData):
+	print(player_data.role)
+	return player_data.role
 	
-func send_results():
+func send_results(player_data: PlayerData):
 	pass

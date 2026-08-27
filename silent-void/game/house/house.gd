@@ -3,7 +3,8 @@ class_name  House
 
 var sprite: Texture2D
 var user_name: String
-
+var player_role:String
+var player_data: PlayerData
 
 @onready var house: Sprite2D = $"."
 @onready var hover_frame = $HoverFrame
@@ -12,7 +13,11 @@ var user_name: String
 @onready var actions: MenuButton = $ClickableArea/Actions
 
 
+
+
+
 func _ready() -> void:
+	player_data = PlayerData.setup_citizen_data(player_role)
 	_setup_faction_color()
 	house.texture = sprite
 	label.text = user_name
@@ -20,8 +25,14 @@ func _ready() -> void:
 	clickable_area.mouse_exited.connect(_on_mouse_exited)
 	hover_frame.visible = false
 	var action_list: PopupMenu = actions.get_popup()
-	for action in Player.actions.skills:
-		action_list.add_item(action.display_name)
+	action_list.id_pressed.connect(_on_action_pressed.bind(player_data))
+	for i in range(Player.actions.skills.size()):
+		var action = Player.actions.skills[i]
+		action_list.add_item(action.display_name, i)
+
+func _on_action_pressed(idx: int, player_data: PlayerData):
+	var skill_to_run = Player.actions.skills[idx].action
+	skill_to_run.call(player_data)
 
 
 func _on_mouse_entered() -> void:

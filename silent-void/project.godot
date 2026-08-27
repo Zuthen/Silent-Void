@@ -32,7 +32,7 @@ enabled=PackedStringArray("res://addons/gut/plugin.cfg")
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://translations/Silent void translations - Sheet1.pl.translation", "res://translations/Silent void translations - Sheet1.en.translation")
+locale/translations=PackedStringArray("res://translations/Silent void translations - Sheet1 .pl.translation", "res://translations/Silent void translations - Sheet1 .en.translation")
 
 [physics]
 
