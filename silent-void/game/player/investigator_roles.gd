@@ -21,10 +21,13 @@ func _setup_fbi_agent_actions() -> SkillList:
 	send_message.display_name = tr("SEND_MESSAGE")
 	investigator_actions.skills.append(send_message)
 	return investigator_actions
+
+func _check_identity(house: House):
+	var investigator_panel_scene: PackedScene = load("uid://iwhatcdnife4")
+	var popup = investigator_panel_scene.instantiate()
+	popup.nick = house.user_name
+	popup.role = house.player_role
+	house.add_child(popup)
 	
-func _check_identity(player_data:PlayerData):
-	print(player_data.role)
-	return player_data.role
-	
-func send_results(player_data: PlayerData):
+func send_results(house: House):
 	pass

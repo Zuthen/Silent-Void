@@ -18,5 +18,13 @@ func _spawn_house(texture: Texture2D, position: Vector2, user_name: String, user
 		house.sprite = texture
 		house.user_name = user_name
 		house.player_role = user_role
+		house.add_to_group("houses")
+		house.action_used.connect(_house_action_used)
 		add_child(house)
 	
+func _house_action_used():
+	var houses = get_tree().get_nodes_in_group("houses")
+	for house in houses:
+		var action_list: PopupMenu = house.actions.get_popup()
+		for i in range (action_list.item_count):
+			action_list.set_item_disabled(i, true)

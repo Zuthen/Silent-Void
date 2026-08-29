@@ -2,6 +2,8 @@ extends GutTest
 
 var house_scene = load("uid://mn8qtvavg7cr")
 
+var click_eve
+
 var hover_color_data = [
 	[Player.Faction.INVESTIGATOR, ColorPaletteGlobal.faction_colors["Investigator"]],
 	[Player.Faction.CULTIST, ColorPaletteGlobal.faction_colors["Cultist"]],
@@ -50,4 +52,3 @@ func test_actions_by_player_role(p = use_parameters(role_actions_data)):
 	assert_eq(popup.item_count, 2)
 	assert_eq(popup.get_item_text(0), tr(action_1_display_value))
 	assert_eq(popup.get_item_text(1), tr(action_2_display_value))
-	

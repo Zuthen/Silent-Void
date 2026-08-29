@@ -89,7 +89,6 @@ func test_border_color_by_faction(p = use_parameters(hover_color_data)):
 	
 	clickable.mouse_entered.emit()
 	test_house._setup_faction_color()
-	
 
 	assert_eq(color_frame.border_color, expected_color)
 
