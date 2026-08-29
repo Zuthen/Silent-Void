@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://c3up43gjd886d" path="res://assets/kenney_scribble-platformer/PNG/Default/background_cloudB.png" id="8_4cobl"]
 [ext_resource type="Script" uid="uid://vjsdw283qkrv" path="res://mocks/house_data.gd" id="8_y36n6"]
 [ext_resource type="Texture2D" uid="uid://b6vjsocqqgwqr" path="res://assets/kenney_scribble-dungeons/Tilesheet/tilesheet@2.png" id="9_3vho3"]
-[ext_resource type="Script" uid="uid://d2svckra8alr2" path="res://game/player/player.gd" id="9_l8g03"]
 [ext_resource type="Texture2D" uid="uid://1rjqbbpr8ojk" path="res://assets/kenney_scribble-platformer-expansion_1.0/Tilesheet/tilesheet-double.png" id="11_qf6n1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vsp63"]
@@ -13991,6 +13990,3 @@ tile_set = SubResource("TileSet_cvwy8")
 
 [node name="HouseMocks" type="Node" parent="." unique_id=1850970713]
 script = ExtResource("8_y36n6")
-
-[node name="Player" type="Node" parent="." unique_id=997129480]
-script = ExtResource("9_l8g03")

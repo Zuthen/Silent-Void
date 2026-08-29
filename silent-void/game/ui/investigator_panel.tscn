@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://iwhatcdnife4"]
+
+[ext_resource type="Script" uid="uid://blip7eq5nonn8" path="res://game/ui/investigator_panel.gd" id="1_m2hpr"]
+[ext_resource type="PackedScene" uid="uid://brib522nfmq67" path="res://game/ui/popup/popup_panel.tscn" id="1_x31pj"]
+[ext_resource type="FontFile" uid="uid://dgirac0no0sog" path="res://assets/fonts/PatrickHand-Regular.ttf" id="2_m2hpr"]
+
+[node name="InvestigatorPanel" type="Control" unique_id=1550263532]
+z_index = 1
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -157.0
+offset_top = -99.0
+offset_right = -66.0
+offset_bottom = -55.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.23688644, 0.16831616)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_m2hpr")
+
+[node name="PopupPanel" parent="." unique_id=205349000 instance=ExtResource("1_x31pj")]
+layout_mode = 0
+offset_left = 0.0
+offset_right = 1132.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PopupPanel" unique_id=1503083878]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.16470589, 0.16470589, 0.16470589, 1)
+theme_override_fonts/normal_font = ExtResource("2_m2hpr")
+theme_override_font_sizes/normal_font_size = 140
+bbcode_enabled = true
+text = "Rolą {nick} 
+jest
+{role}"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 ColorPaletteGlobal="*uid://baldlxik0q0n4"
+Player="*uid://d2svckra8alr2"
 
 [display]
 
@@ -28,6 +29,10 @@ mouse_cursor/custom_image="uid://b4enijphw5sjs"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/gut/plugin.cfg")
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://translations/Silent void translations - Sheet1 .pl.translation", "res://translations/Silent void translations - Sheet1 .en.translation")
 
 [physics]
 

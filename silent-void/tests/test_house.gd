@@ -56,8 +56,8 @@ func test_spawn():
 	var  test_data = data.houses.pick_random()
 	# Act
 	var test_house: House = house_scene.instantiate()
-	test_house.user_name = test_data.user_name
 	test_house.sprite = test_data.texture
+	test_house.user_name = test_data.user_name
 	add_child_autofree(test_house)
 	# Assert
 	assert_eq(test_house.label.text, test_data.user_name)
@@ -80,7 +80,8 @@ func test_border_color_by_faction(p = use_parameters(hover_color_data)):
 	var faction_name = p[2]
 
 	var test_house: House = house_scene.instantiate()
-	test_house.user_faction = faction
+	Player.faction= faction
+
 	add_child_autofree(test_house)
 	
 	var clickable = test_house.get_node("ClickableArea")
@@ -88,7 +89,6 @@ func test_border_color_by_faction(p = use_parameters(hover_color_data)):
 	
 	clickable.mouse_entered.emit()
 	test_house._setup_faction_color()
-	
 
 	assert_eq(color_frame.border_color, expected_color)
 
