@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://iwhatcdnife4"]
+[gd_scene format=3 uid="uid://gwu2pin2f23f"]
 
 [ext_resource type="Script" uid="uid://blip7eq5nonn8" path="res://game/ui/investigator_panel.gd" id="1_m2hpr"]
 [ext_resource type="PackedScene" uid="uid://brib522nfmq67" path="res://game/ui/popup/popup_panel.tscn" id="1_x31pj"]

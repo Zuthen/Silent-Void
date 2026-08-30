@@ -67,14 +67,12 @@ func test_spawn():
 	data.queue_free()
 	
 
-var hover_color_data = [
+
+func test_border_color_by_faction(p = use_parameters([
 	[Player.Faction.INVESTIGATOR, ColorPaletteGlobal.faction_colors["Investigator"], "Investigator"],
 	[Player.Faction.CULTIST, ColorPaletteGlobal.faction_colors["Cultist"],"Cultist"],
 	[Player.Faction.CREATURE, ColorPaletteGlobal.faction_colors["Creature"], "Creature"]
-]
-
-
-func test_border_color_by_faction(p = use_parameters(hover_color_data)):
+])):
 	var faction = p[0]
 	var expected_color = p[1]
 	var faction_name = p[2]
@@ -91,5 +89,3 @@ func test_border_color_by_faction(p = use_parameters(hover_color_data)):
 	test_house._setup_faction_color()
 
 	assert_eq(color_frame.border_color, expected_color)
-
-	
