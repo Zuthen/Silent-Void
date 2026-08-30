@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 ColorPaletteGlobal="*uid://baldlxik0q0n4"
 Player="*uid://d2svckra8alr2"
+GlobalSignals="*uid://dlng11rt0o7xh"
 
 [display]
 
